@@ -21,7 +21,7 @@
 					<label>Usuario</label>
 					<input type="text" id="usuario" class="form-control input-sm" name="">
 					<label>Password</label>
-					<input type="text" id="password" class="form-control input-sm" name="">
+					<input type="password" id="password" class="form-control input-sm" name="">
 					<p></p>
 					<span class="btn btn-primary" id="entrarSistema">Entrar</span>
 					<a href="registro.php" class="btn btn-danger">Registro</a>
@@ -33,3 +33,17 @@
 </div>
 </body>
 </html>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('#entrarSistema').click(function(){
+			if($('#usuario').val()==""){
+				alertify.alert("debes agregar el usuario");
+				return false;
+			}else if($('#password').val()==""){
+				alertify.alert("debes agregar la contraseña");
+				return false;
+			}
+		});
+	});
+</script>

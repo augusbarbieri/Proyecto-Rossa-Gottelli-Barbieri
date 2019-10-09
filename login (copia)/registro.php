@@ -52,6 +52,24 @@
 				alertify.alert("Debes agregar la contraseña");
 				return false;
 			}
+
+			cadena="nombre="+$('#nombre').val()+
+				"&apellido="+ $('#apellido').val()+
+				"&usuario="+ $('#usuario').val()+
+				"&password="+ $('#password').val();
+
+				$.ajax({
+					type:"POST",
+					url:"php/registro.php",
+					data:cadena,
+					succes:function(r){
+						if(r==1){
+							alertify.succes("agregado con exito");
+					}else{
+						alertify.error("fallo al agregar");
+					}
+					}
+				});
 	});
 });
 </script>
