@@ -13,7 +13,8 @@
 			<div class="panel panel-danger">
 				<div class="panel panel-heading">Registro de usuario</div>
 				<div class="panel panel-body">
-					<label>Nombre</label>
+					<form id="frmRegistro">
+						<label>Nombre</label>
 					<input type="text" class="form-control input-sm" id="nombre" name="">
 					<label>Apellido</label>
 					<input type="text" class="form-control input-sm" id="apellido" name="">
@@ -23,6 +24,7 @@
 					<input type="text" class="form-control input-sm" id="password" name="">
 					<p></p>
 					<span class="btn btn-primary" id="registrarNuevo">Registrar</span>
+					</form>
 					<div style="text-align: right;">
 						<a href="index.php" class="btn btn-default">Login</a>
 					</div>
@@ -63,7 +65,12 @@
 						url:"php/registro.php",
 						data:cadena,
 						success:function(r){
-							if(r==1){
+
+							if(r==2){
+								alertify.alert("Este usuario ya existe, prueba con otro :)");
+							}
+							else if(r==1){
+								$('#frmRegistro')[0].reset();
 								alertify.success("Agregado con exito");
 							}else{
 								alertify.error("Fallo al agregar");

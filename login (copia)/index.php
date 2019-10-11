@@ -44,6 +44,22 @@
 				alertify.alert("Debes agregar el password");
 				return false;
 			}
+
+			cadena="usuario=" + $('#usuario').val() + 
+					"&password=" + $('#password').val();
+
+					$.ajax({
+						type:"POST",
+						url:"php/login.php",
+						data:cadena,
+						success:function(r){
+							if(r==1){
+								window.location="inicio.php";
+							}else{
+								alertify.alert("Fallo al entrar :(");
+							}
+						}
+					});
 		});	
 	});
 </script>
