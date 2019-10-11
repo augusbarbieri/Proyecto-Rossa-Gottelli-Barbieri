@@ -22,7 +22,7 @@
 					<label>Password</label>
 					<input type="text" class="form-control input-sm" id="password" name="">
 					<p></p>
-					<span class="btn btn-primary" id="registrarNuevo" >Registrar</span>
+					<span class="btn btn-primary" id="registrarNuevo">Registrar</span>
 					<div style="text-align: right;">
 						<a href="index.php" class="btn btn-default">Login</a>
 					</div>
@@ -49,27 +49,28 @@
 				alertify.alert("Debes agregar el usuario");
 				return false;
 			}else if($('#password').val()==""){
-				alertify.alert("Debes agregar la contraseña");
+				alertify.alert("Debes agregar el password");
 				return false;
 			}
 
-			cadena="nombre="+$('#nombre').val()+
-				"&apellido="+ $('#apellido').val()+
-				"&usuario="+ $('#usuario').val()+
-				"&password="+ $('#password').val();
+			cadena="nombre=" + $('#nombre').val() +
+					"&apellido=" + $('#apellido').val() +
+					"&usuario=" + $('#usuario').val() + 
+					"&password=" + $('#password').val();
 
-				$.ajax({
-					type:"POST",
-					url:"php/registro.php",
-					data:cadena,
-					succes:function(r){
-						if(r==1){
-							alertify.succes("agregado con exito");
-					}else{
-						alertify.error("fallo al agregar");
-					}
-					}
-				});
+					$.ajax({
+						type:"POST",
+						url:"php/registro.php",
+						data:cadena,
+						success:function(r){
+							if(r==1){
+								alertify.success("Agregado con exito");
+							}else{
+								alertify.error("Fallo al agregar");
+							}
+						}
+					});
+		});
 	});
-});
 </script>
+

@@ -12,10 +12,10 @@
 		<div class="col-sm-4"></div>
 		<div class="col-sm-4">
 			<div class="panel panel-primary">
-				<div class="panel panel-heading">Login</div>
+				<div class="panel panel-heading">Login facultad autodidacta</div>
 				<div class="panel panel-body">
 					<div style="text-align: center;">
-						<img src="" height="250">
+						<img src="img/photo.jpg" height="250">
 					</div>
 					<p></p>
 					<label>Usuario</label>
@@ -38,12 +38,12 @@
 	$(document).ready(function(){
 		$('#entrarSistema').click(function(){
 			if($('#usuario').val()==""){
-				alertify.alert("debes agregar el usuario");
+				alertify.alert("Debes agregar el usuario");
 				return false;
 			}else if($('#password').val()==""){
-				alertify.alert("debes agregar la contraseña");
+				alertify.alert("Debes agregar el password");
 				return false;
 			}
-		});
+		});	
 	});
 </script>
