@@ -4,20 +4,50 @@
 	<title>Registro</title>
 	<?php require_once "scripts.php"; ?>
 </head>
-<body style="background-color: gray">
-<br><br><br>
-<div class="container">
+<body style="background-color: white">
+
+<nav class="navbar navbar-inverse">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <a class="navbar-brand" href="html/practica_para_html.html">HW gaming</a>
+            </div>
+            <ul class="nav navbar-nav">
+              <li class=""><a href="html/galeria.html">Productos</a></li>
+              <li><a href="html/arma_pc.html">Arma Tu PC</a></li>
+              <li><a href="html/libro.html">Promociones</a></li>
+             
+            </ul>
+            <ul class="nav navbar-nav navbar-right hidden-xs">
+              <li><a href="registro.php"><span class="glyphicon glyphicon-user"></span> Registrarse</a></li>
+              <li><a href="html/ingresar.html"><span class="glyphicon glyphicon-log-in"></span> Ingresar</a></li>
+              <li>
+                <a href=""></a>
+             </li>
+            </ul>
+          </div>
+        </nav>
+
+<br>
+<div>
 	<div class="row">
-		<div class="col-sm-4"></div>
+		<div class="col-sm-1"></div>
 		<div class="col-sm-4">
 			<div class="panel panel-danger">
 				<div class="panel panel-heading">Registro de usuario</div>
 				<div class="panel panel-body">
 					<form id="frmRegistro">
-						<label>Nombre</label>
-					<input type="text" class="form-control input-sm" id="nombre" name="">
-					<label>Apellido</label>
-					<input type="text" class="form-control input-sm" id="apellido" name="">
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+						        <label>Nombre</label>
+					            <input type="text" class="form-control input-sm" id="nombre" name="">
+                            </div>
+
+                            <div class="col-md-6 mb-3">
+                                <label>Apellido</label>
+                                <input type="text" class="form-control input-sm" id="apellido" name="">
+                            </div>
+                        <div>
+
 					<label>Usuario</label>
 					<input type="text" class="form-control input-sm" id="usuario" name="">
                     <label>DNI</label>
