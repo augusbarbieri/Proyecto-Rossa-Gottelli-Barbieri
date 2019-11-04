@@ -19,7 +19,8 @@
             </ul>
             <ul class="nav navbar-nav navbar-right hidden-xs">
               <li><a href="registro.php"><span class="glyphicon glyphicon-user"></span> Registrarse</a></li>
-              <li><a href="html/ingresar.html"><span class="glyphicon glyphicon-log-in"></span> Ingresar</a></li>
+              <li><a href="inicio.php"><span class="glyphicon glyphicon-log-in"></span> Ingresar</a></li>
+              <li><a href="inicio.php"><span class=""></span> Cerrar Sesion</a></li>
               <li>
                 <a href=""></a>
              </li>
